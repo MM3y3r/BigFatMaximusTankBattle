@@ -52,5 +52,6 @@ public class MainActivity extends ActionBarActivity {
     public void onStartGameButtonClick(View view) {
         battleCounter ++;
         battleCounterTextView.setText(Integer.toString(battleCounter));
+        //Mein Battle-Counter zählt hier die Kämpfe
     }
 }
