@@ -5,14 +5,25 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 
 public class MainActivity extends ActionBarActivity {
+    public int battleCounter = 0;
+    private TextView battleCounterTextView;
+    private Button battleCounterButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        battleCounterTextView = (TextView) findViewById(R.id.id_battle_counter);
+        battleCounterButton = (Button) findViewById(R.id.id_battle_counter_button);
     }
 
 
@@ -38,6 +49,8 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onButtonClick(View view) {
+    public void onStartGameButtonClick(View view) {
+        battleCounter ++;
+        battleCounterTextView.setText(Integer.toString(battleCounter));
     }
 }
